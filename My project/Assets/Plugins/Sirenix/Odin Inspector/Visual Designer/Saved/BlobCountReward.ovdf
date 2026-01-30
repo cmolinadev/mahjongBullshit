@@ -1,0 +1,17 @@
+OVDF v1.0
+BlobCountReward, Assembly-CSharp
+
+# icon
+Position: $S6RPKTjSJg4dLLfmxEuw4i:0
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	FilterMode = Point
+	Height = 75
++ [Sirenix.OdinInspector.HideLabelAttribute]
++ [UnityEngine.SpaceAttribute]
+	height = 10
+
+# title
+Position: $FdBZbY4V1nsKyoNkPECZUU:0
+
+# extraStartingBlobs
+Position: $FB87cG6ywjub5nfCt1WJ2V:0

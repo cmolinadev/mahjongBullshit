@@ -1,0 +1,24 @@
+OVDF v1.0
+PaletteCosmetic, Assembly-CSharp
+
+# textureName
+Position: $root:1
+
+# jellyColors
++ [Sirenix.OdinInspector.PropertySpaceAttribute]
+	SpaceBefore = 15
+	SpaceAfter = 25
+
+# SavePaletteToXMLString()
+Position: $root:7
+
+# xmlString
+* [UnityEngine.TextAreaAttribute]
+	maxLines = 15
+	minLines = 10
++ [Sirenix.OdinInspector.PropertySpaceAttribute]
+	SpaceBefore = 25
+	SpaceAfter = 15
+
+# SavePaletteToTexture()
+Position: $root:2
