@@ -1,0 +1,15 @@
+OVDF v1.0
+PreviewBlobSpawner, Assembly-CSharp
+
+# $8kifxki6PWJxxkcMscWzo5
+Position: $root:5
++ [Sirenix.OdinInspector.HorizontalGroupAttribute]
+	Width = 0
+	HideWhenChildrenAreInvisible = False
+	LabelWidth = 0
+
+# previewSpawner
+Position: $8kifxki6PWJxxkcMscWzo5:0
+
+# previewLevels
+Position: $8kifxki6PWJxxkcMscWzo5:1

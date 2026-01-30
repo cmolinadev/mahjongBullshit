@@ -1,0 +1,32 @@
+OVDF v1.0
+RewardDatabase, Assembly-CSharp
+
+# AddRewardsFromResources()
+* [Sirenix.OdinInspector.ButtonAttribute]
+	buttonHeight = 50
+	HasDefinedButtonHeight = True
+	Icon = Download
+	buttonIconAlignment = LeftOfText
+	HasDefinedButtonIconAlignment = True
+	Style = CompactBox
+	Name = "Load From Assets"
+	drawResult = False
+	drawResultIsSet = True
+	Expanded = False
+	stretch = True
+	HasDefinedStretch = True
+	buttonAlignment = 0.5
+	HasDefinedButtonAlignment = True
++ [UnityEngine.SpaceAttribute]
+	height = 15
+
+# rewards
++ [Sirenix.OdinInspector.TableListAttribute]
+	NumberOfItemsPerPage = 10
+	DefaultMinColumnWidth = 0
+	ShowIndexLabels = False
+	DrawScrollView = True
+	AlwaysExpanded = False
+	HideToolbar = True
+	CellPadding = 0
+	IsReadOnly = False

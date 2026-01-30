@@ -1,0 +1,26 @@
+OVDF v1.0
+LevelsDatabase, Assembly-CSharp
+
+# levels
++ [Sirenix.OdinInspector.TableListAttribute]
+	CellPadding = 5
+	HideToolbar = True
+	DrawScrollView = True
+	NumberOfItemsPerPage = 10
+	IsReadOnly = True
+	ShowIndexLabels = True
+	AlwaysExpanded = True
+	MaxScrollViewHeight = 750
+	MinScrollViewHeight = 250
+	DefaultMinColumnWidth = 5
++ [UnityEngine.SpaceAttribute]
+	height = 25
+
+# googleSheetId
+Position: $root:0
+
+# DownloadLevelsFromGoogleSheet()
+Position: $root:1
+* [Sirenix.OdinInspector.ButtonAttribute]
+	buttonHeight = 37
+	HasDefinedButtonHeight = True
