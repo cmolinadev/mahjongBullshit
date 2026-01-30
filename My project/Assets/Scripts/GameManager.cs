@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<Viento> _vientos;
     Viento _currentViento;
+    private bool gameStarted = false;
     bool gameOver = false;
     
     void Update()
@@ -13,13 +14,17 @@ public class GameManager : MonoBehaviour
         if (gameOver)
             return;
 
+        if (!gameStarted)
+        {
+            StartGame();
+            return;
+        }
+        
         TickGameProgress();
     }
 
     private void TickGameProgress()
     {
-        TryStartWin();
-        
         if (CurrentVientoInProgress()) return;
         
         _vientos.RemoveAt(0);
@@ -33,20 +38,18 @@ public class GameManager : MonoBehaviour
         ServeNextViento();
     }
 
-    private bool CurrentVientoInProgress()
+    private void StartGame()
     {
-        return !_currentViento.Finished;
+        ServeNextViento();
+        gameStarted = true;
     }
-
-    private void TryStartWin()
-    {
-        if (_currentViento == null)
-            _currentViento = _vientos[0];
-    }
+    
+    private bool CurrentVientoInProgress() => !_currentViento.Finished;
 
     private void ServeNextViento()
     {
         _currentViento = _vientos[0];
+        _currentViento.StartViento();
     }
 
     private void Win()

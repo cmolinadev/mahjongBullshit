@@ -8,7 +8,7 @@ public class Viento : MonoBehaviour
     public int _numeroBrisas = 3;
     private int _remainigBrisas;
     [SerializeField] BrisaManager _brisaManager;
-    private bool _inProgress = true;
+    private bool _inProgress = false;
     
     public bool Finished =>  !_inProgress;
 
@@ -23,7 +23,7 @@ public class Viento : MonoBehaviour
 
     void GetPlayerInput()
     {
-        if (!CanGetInput)
+        if (!IsNotDropping)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -38,5 +38,12 @@ public class Viento : MonoBehaviour
         
     }
 
-    public bool CanGetInput => true;
+    public bool IsNotDropping => !_brisaManager.IsDropping;
+
+    public void StartViento()
+    {
+        Debug.Log("startViento");
+        _brisaManager.Initialize();
+        _inProgress = true;
+    }
 }
