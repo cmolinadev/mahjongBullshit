@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         if (CurrentVientoInProgress()) return;
         
-        _vientos.RemoveAt(0);
+        FinishCurrentViento();
 
         if (_vientos.Count == 0)
         {
@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
         }
         
         ServeNextViento();
+    }
+
+    private void FinishCurrentViento()
+    {
+        _currentViento.FinishViento();
+        _vientos.RemoveAt(0);
     }
 
     private void StartGame()

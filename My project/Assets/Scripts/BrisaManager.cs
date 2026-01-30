@@ -6,9 +6,13 @@ using UnityEngine;
 
 public class BrisaManager : MonoBehaviour
 {
-    [SerializeField] GameObject _riPrefab; //hacer tipo luego o algo
+    [SerializeField] GameRi _riPrefab; //hacer tipo luego o algo
     [SerializeField] private Faguan _faguan;
+    [SerializeField] private List<Sed> _seds;
     private bool _initialized = false;
+
+    private List<GameRi> _gameRiList = new List<GameRi>();
+    private List<GameRi> _risInSeds = new List<GameRi>();
 
     SwagStateMachine<BrisaState> _brisaStateMachine;
 
@@ -32,13 +36,37 @@ public class BrisaManager : MonoBehaviour
         _brisaStateMachine.AddState(BrisaState.landed);
         
         _brisaStateMachine.CurrentState = BrisaState.holding;
+
+        foreach (var sed in _seds)
+        {
+            sed.SetListeners(OnSedEnterRi, OnSedExitRi);
+        }
     }
+    
     public void SpawnRi()
     {
         _brisaStateMachine.CurrentState = BrisaState.dropping;
-        Instantiate(_riPrefab, _faguan.GetPointerPosition(), Quaternion.identity);
+        var ri = Instantiate(_riPrefab, _faguan.GetPointerPosition(), Quaternion.identity);
+        _gameRiList.Add(ri);
     }
 
 
+    private void OnSedEnterRi(GameRi ri)
+    {
+        _risInSeds.Add(ri);
+    }
+
+    private void OnSedExitRi(GameRi ri)
+    {
+        _risInSeds.Remove(ri);
+    }
+    
+    public void Cleanup()
+    {
+        foreach (var sed in _seds)
+        {
+            sed.RemoveListeners(OnSedEnterRi, OnSedExitRi);
+        }
+    }
  
 }

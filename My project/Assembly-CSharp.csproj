@@ -50,7 +50,9 @@
     <Compile Include="Assets\Scripts\BrisaManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\SwagStateMachine.cs" />
+    <Compile Include="Assets\Scripts\GameRi.cs" />
     <Compile Include="Assets\Scripts\ScriptPruebaLol.cs" />
+    <Compile Include="Assets\Scripts\Sed.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -46,4 +46,10 @@ public class Viento : MonoBehaviour
         _brisaManager.Initialize();
         _inProgress = true;
     }
+
+    public void FinishViento()
+    {
+        _brisaManager.Cleanup();
+        _inProgress = false;
+    }
 }
