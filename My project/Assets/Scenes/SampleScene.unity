@@ -122,6 +122,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &73295817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+  m_PrefabInstance: {fileID: 8694962963730105188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &73295819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 24855917091953433, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+  m_PrefabInstance: {fileID: 8694962963730105188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73295817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e56c4df9a7bd149a7ddb3431eb1dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &73295820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73295817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9216fef19b24c5141b1908708ea8babb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numeroBrisas: 3
+  _brisaManager: {fileID: 73295819}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +188,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0, b: 0.029222488, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -183,7 +213,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.47
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -208,7 +238,53 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -2.9, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1314216680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314216682}
+  - component: {fileID: 1314216681}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1314216681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314216680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d9d23bfb09edd4dac32b18b49af1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vientos:
+  - {fileID: 73295820}
+--- !u!4 &1314216682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314216680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1130242, y: -3.2261746, z: -0.035588782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -228,11 +304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62406504
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5674424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.z
@@ -269,7 +345,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 73295820}
   m_SourcePrefab: {fileID: 100100000, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -277,3 +356,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 8694962963730105188}
+  - {fileID: 1314216682}
