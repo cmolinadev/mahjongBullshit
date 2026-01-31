@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<Viento> _vientos;
+    [SerializeField] private Chi _chi;
     Viento _currentViento;
     private bool gameStarted = false;
     bool gameOver = false;
@@ -26,9 +27,15 @@ public class GameManager : MonoBehaviour
     private void TickGameProgress()
     {
         if (CurrentVientoInProgress()) return;
-        
+
+        var win = _chi.IsVientoWon(_currentViento);
         FinishCurrentViento();
 
+        if (!win)
+        {
+            Lose();
+            return;
+        }
         if (_vientos.Count == 0)
         {
             Win();
@@ -37,7 +44,7 @@ public class GameManager : MonoBehaviour
         
         ServeNextViento();
     }
-
+    
     private void FinishCurrentViento()
     {
         _currentViento.FinishViento();
@@ -63,4 +70,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("yujus");
         gameOver = true;
     }
+    
+    private void Lose()
+    {
+        Debug.Log("la peldiste");
+        gameOver = true;
+    }
+
 }

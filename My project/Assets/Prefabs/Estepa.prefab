@@ -205,6 +205,7 @@ MonoBehaviour:
   - {fileID: 7549045027656052579}
   - {fileID: 3284595881575983215}
   - {fileID: 4936816641662569702}
+  _winDelay: 1
 --- !u!1 &3878827902961524577
 GameObject:
   m_ObjectHideFlags: 0
