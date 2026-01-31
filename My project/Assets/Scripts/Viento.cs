@@ -12,26 +12,21 @@ public class Viento : MonoBehaviour
     private bool _inProgress = false;
     
     public bool Finished =>  !_inProgress;
-
-    private void Update()
+    
+    
+    public bool SpawnRi(RiData data)
     {
         if (!_inProgress)
-            return;
+            return false;
         
-        GetPlayerInput();
-    }
-    
-
-    void GetPlayerInput()
-    {
         if (!CanDrop)
-            return;
+            return false;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (_brisaManager.isHolding)
-                _brisaManager.SpawnRi();
-        }
+        if (!_brisaManager.isHolding) return false;
+        
+        _brisaManager.SpawnRi(data);
+        return true;
+
     }
 
     public void OnBrisaFinished()
@@ -50,7 +45,7 @@ public class Viento : MonoBehaviour
         Debug.Log("startViento");
         _remainigBrisas = _numeroBrisas;
         _brisaManager.Initialize(OnBrisaFinished);
-        _mano.Initialize();
+        _mano.Initialize(this);
         _mano.PedirRis();
         _inProgress = true;
     }

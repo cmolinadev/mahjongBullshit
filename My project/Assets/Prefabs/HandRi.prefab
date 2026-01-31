@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3969607800175294895}
   - component: {fileID: 41982552316994647}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2870752299999796078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92, y: 0.92, z: 0.92}
+  m_LocalPosition: {x: 0.000000067511, y: 0.00000013502, z: -0.000000003692}
+  m_LocalScale: {x: 0.044030257, y: 0.044030257, z: 0.044030257}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9090239394723469803}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 89c680fd7f71c2f41925b3045973fbf6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9090239394723469803}
   - component: {fileID: 4575769788016973171}
-  m_Layer: 0
+  - component: {fileID: 452402432221399992}
+  m_Layer: 3
   m_Name: HandRi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,4 +133,40 @@ MonoBehaviour:
   _riData:
     _yu: 0
     _semilla: 0
-  _visuals: {fileID: 2870752299999796078}
+  _visuals: {fileID: 41982552316994647}
+  _riVisuals: {fileID: 11400000, guid: 3b1ebcec25cc3dc4680dce8d273dcb40, type: 2}
+--- !u!58 &452402432221399992
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710780759659683716}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.09
