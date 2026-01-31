@@ -5,6 +5,9 @@
 *Library*
 *library*
 *Temp*
+*.csproj*
+*.Csproj*
+.csproj
 *temp*
 .utmp/
 /[Ll]ibrary/
