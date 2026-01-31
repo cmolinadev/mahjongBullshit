@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,16 @@ public class RiVisualConfig : ScriptableObject
     [SerializeField] private List<Sprite> _riTris;
     [SerializeField] private List<Sprite> _riChis;
     [SerializeField] private List<Sprite> _riMos;
+    
+
+    [SerializeField] private Sprite  _sedTri;
+    [SerializeField] private Sprite  _sedChi;
+    [SerializeField] private Sprite  _sedMo;
+
     [SerializeField] private Sprite _dragonSed;
     [SerializeField] private Sprite _oniSed;
     [SerializeField] private Sprite _vacioSed;
+    
     
     public Sprite GetRiSprite(Semilla semilla, int yu)
     {
@@ -23,6 +31,21 @@ public class RiVisualConfig : ScriptableObject
                 return _riTris[yu];
             case Semilla.Mo:
                 return _riMos[yu];
+            default:
+                return null;
+        }
+    }
+
+    public Sprite GetSedSprite(Semilla semilla)
+    {
+        switch (semilla)
+        {
+            case Semilla.Chi:
+               return _sedChi;
+            case Semilla.Tri:
+                return _sedTri;
+            case Semilla.Mo:
+                return _sedMo;
             default:
                 return null;
         }
