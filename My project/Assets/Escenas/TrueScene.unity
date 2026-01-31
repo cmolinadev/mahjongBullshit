@@ -150,9 +150,25 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.g
+      value: 0.35089457
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1716981
+      objectReference: {fileID: 0}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepa4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -227,9 +243,21 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.b
+      value: 0.45098042
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.g
+      value: 0.78962713
+      objectReference: {fileID: 0}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepa2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,9 +579,25 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18679237
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36823073
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepa3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -628,6 +672,18 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9684842
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6396227
+      objectReference: {fileID: 0}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepa1
