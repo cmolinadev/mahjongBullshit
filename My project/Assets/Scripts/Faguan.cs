@@ -8,6 +8,7 @@ public class Faguan : MonoBehaviour
 {
     [SerializeField] private Transform _pointA;
     [SerializeField] private Transform _pointB;
+    [SerializeField] private GameObject _monki;
     [SerializeField] private GameObject _finger;
     [SerializeField] private float _cycleLength = 2;
     
@@ -22,20 +23,20 @@ public class Faguan : MonoBehaviour
     void Start()
     {
         GameObject g = new GameObject();
-        _finger.transform.position = _pointA.position;
+        _monki.transform.position = _pointA.position;
         StartMoving();
     }
     
 
     public void StartMoving()
     {
-        _finger.transform.DOMove(_pointB.position, _cycleLength).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+        _monki.transform.DOMove(_pointB.position, _cycleLength).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void HideMeter()
     {
-        DOTween.Kill(_finger);
-        _finger.transform.position = _pointA.position;
+        DOTween.Kill(_monki);
+        _monki.transform.position = _pointA.position;
         gameObject.SetActive(false);
     }
 

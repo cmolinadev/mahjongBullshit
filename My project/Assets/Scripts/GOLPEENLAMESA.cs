@@ -21,9 +21,7 @@ public class GOLPEENLAMESA : MonoBehaviour
         _animator.SetTrigger("Pulsar");
       }
    }
-
-
-
+   
 
    public bool CanHit => !_viento.Finished;
 
