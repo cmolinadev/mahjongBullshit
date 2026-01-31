@@ -7,6 +7,9 @@ public class HandRi : MonoBehaviour
 {
     [SerializeField][ReadOnly] private RiData _riData;
     [SerializeField] private GameObject _visuals;
+
+    private bool _handlingEnabled;
+    
     public RiData RiData => _riData;
 
 
@@ -23,6 +26,11 @@ public class HandRi : MonoBehaviour
     private void SetVisuals(RiData riData)
     {
       
+    }
+
+    public void ToggleHandling(bool toggle)
+    {
+        _handlingEnabled = true;
     }
 
     public void Show()
