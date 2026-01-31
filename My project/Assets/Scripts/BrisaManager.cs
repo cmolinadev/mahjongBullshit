@@ -94,10 +94,11 @@ public class BrisaManager : MonoBehaviour
         _onbrisaFinished?.Invoke();
     }
 
-    public void SpawnRi()
+    public void SpawnRi(RiData data)
     {
         _brisaStateMachine.CurrentState = BrisaState.dropping;
         var ri = Instantiate(_riPrefab, _faguan.GetPointerPosition(), Quaternion.identity);
+        ri.SetRiData(data);
         _gameRiList.Add(ri);
     }
 

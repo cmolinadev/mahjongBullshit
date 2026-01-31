@@ -8,11 +8,11 @@ public class Mano : MonoBehaviour
     [FormerlySerializedAs("_holdingPoints")] [SerializeField] private List<HandRi> _handRis = new List<HandRi>();
     [SerializeField] private Udaeta _udaeta;
 
-    public void Initialize()
+    public void Initialize(Viento viento)
     {
         foreach (var handRi in _handRis)
         {
-            handRi.Initialize();
+            handRi.Initialize(viento);
         }
     }
 

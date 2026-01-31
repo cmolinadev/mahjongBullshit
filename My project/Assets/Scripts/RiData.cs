@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class RiData
 {
-    [SerializeField] private float _yu;
+    [SerializeField] private int _yu;
     [SerializeField] private Semilla _semilla;
 
     public RiData(int yu, Semilla semilla)
@@ -14,7 +14,7 @@ public class RiData
         _semilla = semilla;
     }
 
-    public float Yu => _yu;
+    public int Yu => _yu;
     public Semilla Semilla => _semilla;
 }
 
@@ -22,7 +22,7 @@ public enum Semilla
 {
     Chi,
     Tri,
-    Mu,
+    Mo,
     Dragon,
     Oni,
     Vacio

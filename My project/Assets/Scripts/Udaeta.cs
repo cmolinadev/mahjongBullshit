@@ -29,7 +29,7 @@ public class Udaeta : MonoBehaviour
         {
             0 => Semilla.Tri,
             1 => Semilla.Chi,
-            2 => Semilla.Mu,
+            2 => Semilla.Mo,
             _ => Semilla.Tri
         };
         return new RiData(yu, semilla);

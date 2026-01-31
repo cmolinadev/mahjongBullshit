@@ -1,20 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class HandRi : MonoBehaviour
 {
     [SerializeField][ReadOnly] private RiData _riData;
-    [SerializeField] private GameObject _visuals;
+    [SerializeField] private SpriteRenderer _visuals;
+    [SerializeField] private RiVisualConfig _riVisuals;
 
+    private Sequence _showSequence;
     private bool _handlingEnabled;
+    Viento _viento;
     
     public RiData RiData => _riData;
 
 
-    public void Initialize()
+    public void Initialize(Viento viento)
     {
+        _viento = viento;
+        SetShowAnimation();
         Hide();
     }
     public void SetRiData(RiData riData)
@@ -25,9 +32,25 @@ public class HandRi : MonoBehaviour
 
     private void SetVisuals(RiData riData)
     {
-      
+        _visuals.sprite = _riVisuals.GetRiSprite(riData.Semilla, riData.Yu);
     }
 
+    private void OnMouseOver()
+    {
+        if (IsHidden)
+            return;
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+           if (_viento.SpawnRi(_riData)) 
+               Hide();
+        }
+        if (Input.GetMouseButtonDown(1))
+            Debug.Log("BOTON DERECHOP SISISI");
+    }
+
+    private bool IsHidden => !_visuals.gameObject.activeSelf;
+    
     public void ToggleHandling(bool toggle)
     {
         _handlingEnabled = true;
@@ -35,10 +58,23 @@ public class HandRi : MonoBehaviour
 
     public void Show()
     {
-        _visuals.SetActive(true);
+        _visuals.gameObject.SetActive(true);
+        _showSequence.Play();
     }
     public void Hide()
     {
-        _visuals.SetActive(false);
+        _visuals.gameObject.SetActive(false);
+    }
+
+    void SetShowAnimation()
+    {
+        var scale = _visuals.transform.localScale;
+        _visuals.transform.localScale = Vector3.zero;
+
+        Sequence seq = DOTween.Sequence();
+
+        seq.Append(_visuals.transform.DOScale(scale, 0.25f).SetEase(Ease.OutQuad));
+        seq.Append(_visuals.transform.DOScale(scale, 0.15f).SetEase(Ease.OutBounce));
+        _showSequence = seq;
     }
 }
