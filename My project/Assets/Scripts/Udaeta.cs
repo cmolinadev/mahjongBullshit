@@ -24,7 +24,7 @@ public class Udaeta : MonoBehaviour
         var yuRandom = Random.Range(0, yusConfig.Count);
         var yu = yusConfig[yuRandom];
 
-        var semillaRandom = Random.Range(0, 2);
+        var semillaRandom = Random.Range(0, 3);
         var semilla = semillaRandom switch
         {
             0 => Semilla.Tri,

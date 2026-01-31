@@ -43,6 +43,9 @@ public class RiVisualConfig : ScriptableObject
             Semilla.Chi => _sedChi,
             Semilla.Tri => _sedTri,
             Semilla.Mo => _sedMo,
+            Semilla.Dragon => _dragonSed,
+            Semilla.Oni => _oniSed,
+            Semilla.Vacio => _vacioSed,
             _ => null
         };
     }

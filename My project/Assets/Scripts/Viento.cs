@@ -12,6 +12,7 @@ public class Viento : MonoBehaviour
     private bool _inProgress = false;
     
     public bool Finished =>  !_inProgress;
+    public Mano Mano => _mano;
     
     
     public bool SpawnRi(RiData data)

@@ -13,6 +13,7 @@ public class Sed : MonoBehaviour
     private Semilla _semilla;
 
     private List<RiData> _riDataIn = new List<RiData>();
+    private bool _triggeredOni = false;
 
     public Semilla Semilla => _semilla;
     
@@ -24,6 +25,15 @@ public class Sed : MonoBehaviour
     public void ClearBrisa()
     {
         _riDataIn.Clear();
+        if (_triggeredOni)
+            SetOni();
+
+        _triggeredOni = false;
+    }
+
+    private void SetOni()
+    {
+        SetCustomData(Semilla.Oni);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -78,6 +88,11 @@ public class Sed : MonoBehaviour
 
     public List<RiData> GetRiData()
     {
+        foreach (var data in _riDataIn)
+        {
+            if (data.Semilla != _semilla)
+                _triggeredOni = true;
+        }
         return _riDataIn;
     }
 }

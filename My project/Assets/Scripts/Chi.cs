@@ -31,9 +31,15 @@ public class Chi : MonoBehaviour
         foreach (var data in ri)
         {
             Debug.Log("semilla es igual??? "+data.Semilla + " - "+semillaSed+" - "+(data.Semilla == semillaSed));
-            AnimationCurve curve = data.Semilla == semillaSed ?
+
+            if (sed.Semilla == Semilla.Oni)
+            {
+                _accountingScore -= (int)_expoScoreCurve.Evaluate(data.Yu);
+            } else{
+                AnimationCurve curve = data.Semilla == semillaSed ?
                 _expoScoreCurve : _linearScoreCurve;
-            _accountingScore += (int)curve.Evaluate(data.Yu);
+                _accountingScore += (int)curve.Evaluate(data.Yu);
+            }
         }
         Debug.Log(_accountingScore);
     }

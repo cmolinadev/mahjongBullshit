@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,7 +13,6 @@ public class HandRi : MonoBehaviour
     [SerializeField] private RiVisualConfig _riVisuals;
 
     private Sequence _showSequence;
-    private bool _handlingEnabled;
     Viento _viento;
     
     public RiData RiData => _riData;
@@ -45,16 +45,20 @@ public class HandRi : MonoBehaviour
            if (_viento.SpawnRi(_riData)) 
                Hide();
         }
-        if (Input.GetMouseButtonDown(1))
-            Debug.Log("BOTON DERECHOP SISISI");
+
+        if (!Input.GetMouseButtonDown(1)) return;
+        if (_viento.Mano.IntentarMirada())
+            MiradaDeFortuna();
+    }
+
+    private void MiradaDeFortuna()
+    {
+        var data = _viento.Mano.Udaeta.GetRisData(1);
+        SetRiData(data.First());
     }
 
     private bool IsHidden => !_visuals.gameObject.activeSelf;
     
-    public void ToggleHandling(bool toggle)
-    {
-        _handlingEnabled = true;
-    }
 
     public void Show()
     {
