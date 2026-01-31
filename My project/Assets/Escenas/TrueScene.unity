@@ -122,36 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &73295817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+--- !u!114 &73295820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1522146873529548443, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
   m_PrefabInstance: {fileID: 8694962963730105188}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &73295819 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 24855917091953433, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
-  m_PrefabInstance: {fileID: 8694962963730105188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73295817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e56c4df9a7bd149a7ddb3431eb1dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &73295820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73295817}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9216fef19b24c5141b1908708ea8babb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numeroBrisas: 3
-  _brisaManager: {fileID: 73295819}
 --- !u!4 &73295821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
@@ -352,9 +333,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 710130585}
     m_Modifications:
+    - target: {fileID: 969916380231520466, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 969916380231520466, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.968
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194865994984887269, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752720379203408832, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842759964406974049, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327715548130971189, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,13 +401,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8012704453200776653, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 73295820}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

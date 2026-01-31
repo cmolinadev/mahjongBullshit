@@ -8,6 +8,7 @@ public class Viento : MonoBehaviour
     public int _numeroBrisas = 3;
     private int _remainigBrisas;
     [SerializeField] BrisaManager _brisaManager;
+    [SerializeField] private Mano _mano;
     private bool _inProgress = false;
     
     public bool Finished =>  !_inProgress;
@@ -49,6 +50,8 @@ public class Viento : MonoBehaviour
         Debug.Log("startViento");
         _remainigBrisas = _numeroBrisas;
         _brisaManager.Initialize(OnBrisaFinished);
+        _mano.Initialize();
+        _mano.PedirRis();
         _inProgress = true;
     }
 

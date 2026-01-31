@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Udaeta : MonoBehaviour
 {
-    [SerializeField] List<int> yus = new List<int>();
+    [SerializeField] List<int> yusConfig = new List<int>();
 
     
     public List<RiData> GetRisData(int number)
@@ -20,8 +21,8 @@ public class Udaeta : MonoBehaviour
 
     private RiData GetRandomData()
     {
-        var yuRandom = Random.Range(0, yus.Count);
-        var yu = yus[yuRandom];
+        var yuRandom = Random.Range(0, yusConfig.Count);
+        var yu = yusConfig[yuRandom];
 
         var semillaRandom = Random.Range(0, 2);
         var semilla = semillaRandom switch
