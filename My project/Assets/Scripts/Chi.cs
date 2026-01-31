@@ -30,6 +30,7 @@ public class Chi : MonoBehaviour
         var semillaSed = sed.Semilla;
         foreach (var data in ri)
         {
+            Debug.Log("semilla es igual??? "+data.Semilla + " - "+semillaSed+" - "+(data.Semilla == semillaSed));
             AnimationCurve curve = data.Semilla == semillaSed ?
                 _expoScoreCurve : _linearScoreCurve;
             _accountingScore += (int)curve.Evaluate(data.Yu);

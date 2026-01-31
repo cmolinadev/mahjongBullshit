@@ -38,17 +38,13 @@ public class RiVisualConfig : ScriptableObject
 
     public Sprite GetSedSprite(Semilla semilla)
     {
-        switch (semilla)
+        return semilla switch
         {
-            case Semilla.Chi:
-               return _sedChi;
-            case Semilla.Tri:
-                return _sedTri;
-            case Semilla.Mo:
-                return _sedMo;
-            default:
-                return null;
-        }
+            Semilla.Chi => _sedChi,
+            Semilla.Tri => _sedTri,
+            Semilla.Mo => _sedMo,
+            _ => null
+        };
     }
 
 }

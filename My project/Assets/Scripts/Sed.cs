@@ -11,9 +11,10 @@ public class Sed : MonoBehaviour
     [SerializeField] private SpriteRenderer _view;
     [SerializeField] private RiVisualConfig _visualConfig;
     private Semilla _semilla;
+
     private List<RiData> _riDataIn = new List<RiData>();
 
-    public Semilla Semilla;
+    public Semilla Semilla => _semilla;
     
     private void SetVisuals(Semilla semilla)
     {
