@@ -10,6 +10,7 @@ public class BrisaManager : MonoBehaviour
     [SerializeField] private Faguan _faguan;
     [SerializeField] private List<Sed> _seds;
     [SerializeField] private float _winDelay = 1f;
+    [SerializeField] private Chi _chi;
     private bool _initialized = false;
 
     private List<GameRi> _gameRiList = new List<GameRi>();
@@ -69,6 +70,7 @@ public class BrisaManager : MonoBehaviour
         foreach (var sed in _seds)
         {
             sed.SetListeners(OnSedEnterRi, OnSedExitRi);
+            sed.SetRandomSemilla();
         }
     }
 
@@ -83,6 +85,13 @@ public class BrisaManager : MonoBehaviour
     {
         //puntos caballos y cosas
         var newList = new List<GameRi>(_gameRiList);
+
+        foreach (var sed in _seds)
+        {
+            _chi.AddResult(sed, sed.GetRiData());
+        }
+
+        _chi.CalculateScore();
         
         foreach (var ris in newList)
         {
@@ -92,6 +101,9 @@ public class BrisaManager : MonoBehaviour
         
         newList.Clear();
         _onbrisaFinished?.Invoke();
+
+        foreach (var sed in _seds) 
+            sed.ClearBrisa();
     }
 
     public void SpawnRi(RiData data)

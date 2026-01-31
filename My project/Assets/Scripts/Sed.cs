@@ -2,30 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Sed : MonoBehaviour
 {
     private Action<GameRi> _onEnter;
     private Action<GameRi> _onExit;
-    
+    [SerializeField] private SpriteRenderer _view;
+    [SerializeField] private RiVisualConfig _visualConfig;
     private Semilla _semilla;
 
-    public void SetData(Semilla semilla)
-    {
-        _semilla = semilla;
-        SetVisuals(semilla);
-    }
+    private List<RiData> _riDataIn = new List<RiData>();
 
+    public Semilla Semilla => _semilla;
+    
     private void SetVisuals(Semilla semilla)
     {
+        _view.sprite = _visualConfig.GetSedSprite(semilla);
     }
 
+    public void ClearBrisa()
+    {
+        _riDataIn.Clear();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.GetComponent<GameRi>())
             return;
         
+        _riDataIn.Add(other.gameObject.GetComponent<GameRi>().RiData);
         _onEnter?.Invoke(other.gameObject.GetComponent<GameRi>());
     }
 
@@ -34,6 +40,7 @@ public class Sed : MonoBehaviour
         if (!other.GetComponent<GameRi>())
             return;
         
+        _riDataIn.Remove(other.gameObject.GetComponent<GameRi>().RiData);
         _onExit?.Invoke(other.gameObject.GetComponent<GameRi>());
     }
     
@@ -47,5 +54,30 @@ public class Sed : MonoBehaviour
     {
         _onEnter -= onEnter;
         _onExit -= onExit;
+    }
+
+    public void SetRandomSemilla()
+    {
+        var random = Random.Range(0, 3);
+        _semilla = random switch
+        {
+            0 => Semilla.Chi,
+            1 => Semilla.Tri,
+            2 => Semilla.Mo,
+            _ => Semilla.Vacio
+        };
+        
+        SetVisuals(_semilla);
+    }
+    
+    public void SetCustomData(Semilla semilla)
+    {
+        _semilla = semilla;
+        SetVisuals(semilla);
+    }
+
+    public List<RiData> GetRiData()
+    {
+        return _riDataIn;
     }
 }

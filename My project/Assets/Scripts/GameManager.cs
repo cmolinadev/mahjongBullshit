@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     private void FinishCurrentViento()
     {
         _currentViento.FinishViento();
+        _currentViento.gameObject.SetActive(false);
         _vientos.RemoveAt(0);
     }
 
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
     private void ServeNextViento()
     {
         _currentViento = _vientos[0];
+        _currentViento.gameObject.SetActive(true);
         _currentViento.StartViento();
     }
 
