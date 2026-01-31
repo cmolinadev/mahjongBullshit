@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,21 @@ public class GOLPEENLAMESA : MonoBehaviour
    [SerializeField] private RuLibrary _ruLibrary;
    [SerializeField] private Mano _mano;
    [SerializeField] private Viento _viento;
-   
+
+   [SerializeField] private Animator _animator;
+
+
    private void OnMouseOver()
    {
       if (Input.GetMouseButtonDown(0) && CanHit)
       {
         GOLPEAR();
+        _animator.SetTrigger("Pulsar");
       }
    }
+
+
+
 
    public bool CanHit => !_viento.Finished;
 

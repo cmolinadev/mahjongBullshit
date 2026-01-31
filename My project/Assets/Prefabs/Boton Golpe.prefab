@@ -189,3 +189,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ruLibrary: {fileID: 11400000, guid: 9f9938067e71f89419e0a1af25d5340e, type: 2}
   _mano: {fileID: 0}
+  _viento: {fileID: 0}
+  _animator: {fileID: 1674051659219493621}
