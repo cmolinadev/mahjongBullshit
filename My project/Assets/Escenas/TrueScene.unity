@@ -688,6 +688,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Estepa1
       objectReference: {fileID: 0}
+    - target: {fileID: 3820273746159179610, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820273746159179610, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820273746159179610, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.13413186
