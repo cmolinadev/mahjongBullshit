@@ -8,6 +8,18 @@ public class Sed : MonoBehaviour
     private Action<GameRi> _onEnter;
     private Action<GameRi> _onExit;
     
+    private Semilla _semilla;
+
+    public void SetData(Semilla semilla)
+    {
+        _semilla = semilla;
+        SetVisuals(semilla);
+    }
+
+    private void SetVisuals(Semilla semilla)
+    {
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
