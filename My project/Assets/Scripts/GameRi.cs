@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GameRi : MonoBehaviour
 {
-    [SerializeField] private RiData _riData;
+    [SerializeField][ReadOnly] private RiData _riData;
+    [SerializeField] RiVisualConfig _riVisualConfig;
+    [SerializeField] SpriteRenderer _SpriteRenderer;
     public RiData RiData => _riData;
 
     public void SetRiData(RiData riData)
@@ -15,6 +18,6 @@ public class GameRi : MonoBehaviour
 
     private void SetVisuals(RiData riData)
     {
-      
+        _SpriteRenderer.sprite = _riVisualConfig.GetRiSprite(riData.Semilla, riData.Yu);
     }
 }
