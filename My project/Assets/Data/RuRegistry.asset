@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aeefa08656286342869bd24b4f55fd4, type: 3}
+  m_Name: RuRegistry
+  m_EditorClassIdentifier: 
+  RuSets:
+  - _riData:
+    - _yu: 1
+      _semilla: 0
+    - _yu: 1
+      _semilla: 0
+    - _yu: 1
+      _semilla: 0
+    _ruEffect: 5
+  - _riData:
+    - _yu: 6
+      _semilla: 0
+    - _yu: 7
+      _semilla: 1
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 2
+  - _riData:
+    - _yu: 8
+      _semilla: 1
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 3
+  - _riData:
+    - _yu: 6
+      _semilla: 1
+    - _yu: 6
+      _semilla: 1
+    - _yu: 6
+      _semilla: 1
+    _ruEffect: 4
+  - _riData:
+    - _yu: 7
+      _semilla: 2
+    - _yu: 7
+      _semilla: 2
+    _ruEffect: 6
+  - _riData:
+    - _yu: 8
+      _semilla: 1
+    - _yu: 8
+      _semilla: 0
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 1
+  - _riData:
+    - _yu: 1
+      _semilla: 2
+    - _yu: 3
+      _semilla: 2
+    - _yu: 6
+      _semilla: 1
+    _ruEffect: 7
+  - _riData:
+    - _yu: 3
+      _semilla: 0
+    - _yu: 6
+      _semilla: 0
+    - _yu: 7
+      _semilla: 2
+    _ruEffect: 8
+  - _riData:
+    - _yu: 1
+      _semilla: 0
+    - _yu: 3
+      _semilla: 0
+    _ruEffect: 9
+  - _riData:
+    - _yu: 8
+      _semilla: 2
+    - _yu: 6
+      _semilla: 1
+    - _yu: 1
+      _semilla: 0
+    _ruEffect: 10
+  - _riData:
+    - _yu: 1
+      _semilla: 1
+    - _yu: 1
+      _semilla: 1
+    - _yu: 6
+      _semilla: 0
+    - _yu: 8
+      _semilla: 2
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 11
+  - _riData:
+    - _yu: 2
+      _semilla: 1
+    - _yu: 2
+      _semilla: 1
+    - _yu: 6
+      _semilla: 0
+    - _yu: 7
+      _semilla: 2
+    - _yu: 7
+      _semilla: 2
+    _ruEffect: 11
+  - _riData:
+    - _yu: 3
+      _semilla: 0
+    - _yu: 6
+      _semilla: 0
+    - _yu: 1
+      _semilla: 1
+    _ruEffect: 12
+  - _riData:
+    - _yu: 1
+      _semilla: 2
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 13
+  - _riData:
+    - _yu: 1
+      _semilla: 1
+    - _yu: 3
+      _semilla: 1
+    - _yu: 6
+      _semilla: 1
+    _ruEffect: 14
+  - _riData:
+    - _yu: 8
+      _semilla: 1
+    - _yu: 8
+      _semilla: 1
+    - _yu: 8
+      _semilla: 0
+    - _yu: 8
+      _semilla: 2
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 15
+  - _riData:
+    - _yu: 7
+      _semilla: 0
+    - _yu: 8
+      _semilla: 2
+    _ruEffect: 16
