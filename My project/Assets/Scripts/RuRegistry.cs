@@ -33,9 +33,11 @@ public class RuSet
     [SerializeField] private List<RiData> _riData;
     [SerializeField] private RuEffect _ruEffect;
     [SerializeField] private int _scoreBonus = 1000;
+    [SerializeField] private string _name;
     
     public RuEffect Rueffect => _ruEffect;
     public int ScoreBonus => _scoreBonus;
+    public string Name => _name;
     
     public enum RuEffect
     {

@@ -418,6 +418,9 @@ MonoBehaviour:
     _duration: 2.5
   - _particleSystem: {fileID: 669981877028652135, guid: c157ed805dcb8cb409112bff8669d817, type: 3}
     _duration: 2.5
+  _ruParticleSystem:
+    _particleSystem: {fileID: 1287255019741165986, guid: d265fb85f096810439f412dd3ecc9d14, type: 3}
+    _duration: 3.5
 --- !u!1 &3625064642981945768
 GameObject:
   m_ObjectHideFlags: 0

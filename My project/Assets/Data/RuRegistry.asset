@@ -22,6 +22,7 @@ MonoBehaviour:
       _semilla: 0
     _ruEffect: 5
     _scoreBonus: 1500
+    _name: Amanecer Brillante
   - _riData:
     - _yu: 6
       _semilla: 0
@@ -31,6 +32,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 2
     _scoreBonus: 1500
+    _name: Primavera Humilde
   - _riData:
     - _yu: 8
       _semilla: 1
@@ -38,6 +40,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 3
     _scoreBonus: 1000
+    _name: Viento del eSTE
   - _riData:
     - _yu: 6
       _semilla: 1
@@ -47,6 +50,7 @@ MonoBehaviour:
       _semilla: 1
     _ruEffect: 4
     _scoreBonus: 1500
+    _name: Caballo Gentil
   - _riData:
     - _yu: 7
       _semilla: 2
@@ -54,6 +58,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 6
     _scoreBonus: 1500
+    _name: Lunas Gemelas
   - _riData:
     - _yu: 8
       _semilla: 1
@@ -63,6 +68,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 1
     _scoreBonus: 1500
+    _name: CONQUISTA
   - _riData:
     - _yu: 1
       _semilla: 2
@@ -72,6 +78,7 @@ MonoBehaviour:
       _semilla: 1
     _ruEffect: 7
     _scoreBonus: 1500
+    _name: Tsunami Sollozante
   - _riData:
     - _yu: 3
       _semilla: 0
@@ -81,6 +88,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 8
     _scoreBonus: 1500
+    _name: Guerrero Poeta
   - _riData:
     - _yu: 1
       _semilla: 0
@@ -88,6 +96,7 @@ MonoBehaviour:
       _semilla: 0
     _ruEffect: 9
     _scoreBonus: 1000
+    _name: Mantis Religiosa
   - _riData:
     - _yu: 8
       _semilla: 2
@@ -97,6 +106,7 @@ MonoBehaviour:
       _semilla: 0
     _ruEffect: 10
     _scoreBonus: 1000
+    _name: "Ca\xEDda De La Ara\xF1a"
   - _riData:
     - _yu: 1
       _semilla: 1
@@ -110,6 +120,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 11
     _scoreBonus: 8888
+    _name: MURALLA
   - _riData:
     - _yu: 2
       _semilla: 1
@@ -123,6 +134,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 11
     _scoreBonus: 8888
+    _name: MURALLA
   - _riData:
     - _yu: 3
       _semilla: 0
@@ -132,6 +144,7 @@ MonoBehaviour:
       _semilla: 1
     _ruEffect: 12
     _scoreBonus: 1000
+    _name: Refugio
   - _riData:
     - _yu: 1
       _semilla: 2
@@ -139,6 +152,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 13
     _scoreBonus: 1000
+    _name: Loto Negro
   - _riData:
     - _yu: 1
       _semilla: 1
@@ -148,6 +162,7 @@ MonoBehaviour:
       _semilla: 1
     _ruEffect: 14
     _scoreBonus: 1000
+    _name: Niebla Dorada
   - _riData:
     - _yu: 8
       _semilla: 1
@@ -161,6 +176,7 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 15
     _scoreBonus: 8888
+    _name: Milenio Del Chi
   - _riData:
     - _yu: 7
       _semilla: 0
@@ -168,3 +184,4 @@ MonoBehaviour:
       _semilla: 2
     _ruEffect: 16
     _scoreBonus: 1000
+    _name: Grulla Charlatana

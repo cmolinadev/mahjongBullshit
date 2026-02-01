@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class BrisaManager : MonoBehaviour
     private bool _initialized = false;
     
     [SerializeField] private List<ParticleCinematic> _particleCinematics;
-
+    [SerializeField] private ParticleCinematic _ruParticleSystem;
 
     private List<GameRi> _gameRiList = new List<GameRi>();
     private List<GameRi> _risInSeds = new List<GameRi>();
@@ -97,7 +98,6 @@ public class BrisaManager : MonoBehaviour
     
     private void FinishBrisa(bool finishVientoEarly = false)
     {
-        //puntos caballos y cosas
         var newList = new List<GameRi>(_gameRiList);
 
         foreach (var sed in _seds)
@@ -122,10 +122,18 @@ public class BrisaManager : MonoBehaviour
 
     public void AddRuScore(RuSet set)
     {
+        StartCoroutine(AddRuScoreRoutine(set));
+    }
+
+    private IEnumerator AddRuScoreRoutine(RuSet set)
+    {
         _chi.AddRuScore(set);
         _brisaStateMachine.CurrentState = BrisaState.showing;
         
-        //showAnimation!
+        var system = Instantiate(_ruParticleSystem.ParticleSystem, transform.position, Quaternion.identity);
+        system.GetComponentInChildren<TextMeshProUGUI>().text = set.Name;
+        yield return new WaitForSeconds(_ruParticleSystem.Duration);
+
         FinishBrisa(true);
     }
 
