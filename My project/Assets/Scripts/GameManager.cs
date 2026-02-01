@@ -6,13 +6,28 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<Viento> _vientos;
     [SerializeField] private Chi _chi;
+    [SerializeField] GameObject _menuScreen;
+    [SerializeField] GameObject _winScreen;
+    [SerializeField] GameObject _loseScreen;
+    [SerializeField] private UdaetaView _udaetaView;
+
     Viento _currentViento;
+    private bool inMenu = true;
     private bool gameStarted = false;
     bool gameOver = false;
     public Viento CurrentViento => _currentViento;
     
     void Update()
     {
+        if (inMenu)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                _menuScreen.SetActive(false);
+                inMenu = false;
+            }
+            return;
+        }
         if (gameOver)
             return;
 
@@ -74,17 +89,17 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("yujus");
         gameOver = true;
+        _winScreen.SetActive(true);
+        _udaetaView.PlayEmote(UdaetaView.UdaetaState.Clap);
     }
     
     private void Lose()
     {
         Debug.Log("la peldiste");
         gameOver = true;
-    }
+        _loseScreen.SetActive(true);
+        _udaetaView.PlayEmote(UdaetaView.UdaetaState.Wow);
 
-    public void PlayUdaetaVisuals(UdaetaView.UdaetaState state)
-    {
-        
     }
 
 }
