@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,12 @@ public class GameManager : MonoBehaviour
     private bool gameStarted = false;
     bool gameOver = false;
     public Viento CurrentViento => _currentViento;
-    
+
+    private void Start()
+    {
+        _menuScreen.SetActive(true);
+    }
+
     void Update()
     {
         if (inMenu)
