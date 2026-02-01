@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BrisaManager : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class BrisaManager : MonoBehaviour
     [SerializeField] private float _winDelay = 1f;
     [SerializeField] private Chi _chi;
     private bool _initialized = false;
+    
+    [SerializeField] private List<ParticleCinematic> _particleCinematics;
+
 
     private List<GameRi> _gameRiList = new List<GameRi>();
     private List<GameRi> _risInSeds = new List<GameRi>();
@@ -151,6 +156,20 @@ public class BrisaManager : MonoBehaviour
             sed.RemoveListeners(OnSedEnterRi, OnSedExitRi);
         }
         _onbrisaFinished -= _onbrisaFinished;
+    }
+
+    public void PlayRandomScoreCinematic()
+    {
+        StartCoroutine(PlayRandomScoreCinematicRoutine());
+    }
+    private IEnumerator PlayRandomScoreCinematicRoutine()
+    {
+        var data = _particleCinematics[Random.Range(0, _particleCinematics.Count)];
+        _brisaStateMachine.CurrentState = BrisaState.showing;
+        Instantiate(data.ParticleSystem.gameObject, transform.position, quaternion.identity);
+        yield return new WaitForSeconds(data.Duration);
+        _brisaStateMachine.CurrentState = BrisaState.holding;
+
     }
 
     private bool AllRisInSeds => _risInSeds.Count >= _gameRiList.Count;

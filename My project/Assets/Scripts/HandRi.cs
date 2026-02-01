@@ -37,6 +37,9 @@ public class HandRi : MonoBehaviour
 
     private void OnMouseOver()
     {
+        if (_viento.BrisaManager.isShowing)
+            return;
+        
         if (IsHidden)
             return;
         
