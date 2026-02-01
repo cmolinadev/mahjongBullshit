@@ -960,6 +960,14 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 113284051361640750, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
+    - target: {fileID: 388314060587970680, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     - target: {fileID: 802114885148557831, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -968,6 +976,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784606671194478495, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Color.b
       value: 0.9684842
@@ -980,10 +992,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6396227
       objectReference: {fileID: 0}
+    - target: {fileID: 2195927144664057882, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     - target: {fileID: 3288413530713102077, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Name
       value: Estepa1
       objectReference: {fileID: 0}
+    - target: {fileID: 3618924849428179871, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     - target: {fileID: 3820273746159179610, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -996,6 +1016,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4975579359769098232, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     - target: {fileID: 6452630891620513133, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.13413186
@@ -1036,6 +1060,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8235890340997944966, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
+    - target: {fileID: 8406601716146074694, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
