@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,33 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<Viento> _vientos;
     [SerializeField] private Chi _chi;
+    [SerializeField] GameObject _menuScreen;
+    [SerializeField] GameObject _winScreen;
+    [SerializeField] GameObject _loseScreen;
+    [SerializeField] private UdaetaView _udaetaView;
+
     Viento _currentViento;
+    private bool inMenu = true;
     private bool gameStarted = false;
     bool gameOver = false;
-    
+    public Viento CurrentViento => _currentViento;
+
+    private void Start()
+    {
+        _menuScreen.SetActive(true);
+    }
+
     void Update()
     {
+        if (inMenu)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                _menuScreen.SetActive(false);
+                inMenu = false;
+            }
+            return;
+        }
         if (gameOver)
             return;
 
@@ -65,18 +87,25 @@ public class GameManager : MonoBehaviour
         _currentViento = _vientos[0];
         _currentViento.gameObject.SetActive(true);
         _currentViento.StartViento();
+        _chi.InitializeChiBar();
+        _chi.UpdateChiBar();
     }
 
     private void Win()
     {
         Debug.Log("yujus");
         gameOver = true;
+        _winScreen.SetActive(true);
+        _udaetaView.PlayEmote(UdaetaView.UdaetaState.Clap);
     }
     
     private void Lose()
     {
         Debug.Log("la peldiste");
         gameOver = true;
+        _loseScreen.SetActive(true);
+        _udaetaView.PlayEmote(UdaetaView.UdaetaState.Wow);
+
     }
 
 }
