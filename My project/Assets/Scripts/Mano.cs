@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Mano : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Mano : MonoBehaviour
     [SerializeField] private Udaeta _udaeta;
     [SerializeField] private int _miradasDeFortuna = 3;
     [SerializeField] private TalismanesView _talismanesView;
+    
     private int _miradasDeFortunaRestantes = 0;
     
     public List<HandRi> HandRis => _handRis;
@@ -60,5 +63,4 @@ public class Mano : MonoBehaviour
            handRi.Show();
        }
     }
-    
 }

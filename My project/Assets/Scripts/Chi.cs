@@ -73,9 +73,12 @@ public class Chi : MonoBehaviour
             state = _accountingScore < 50 ? 
                 UdaetaView.UdaetaState.Smoke : 
                 UdaetaView.UdaetaState.Clap;
-            
+
             if (accountingScore >= 400)
+            {
                 state = UdaetaView.UdaetaState.Wow;
+                _gameManager.CurrentViento.BrisaManager.PlayRandomScoreCinematic();
+            }
         }
        
         _udaetaView.PlayEmote(state);

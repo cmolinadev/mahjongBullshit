@@ -409,6 +409,18 @@ MonoBehaviour:
   - {fileID: 4936816641662569702}
   _winDelay: 1
   _chi: {fileID: 0}
+  _particleCinematics:
+  - _particleSystem: {fileID: 9105179211324249884, guid: 369dccee1dcd81148a76973d7a65bbe3, type: 3}
+    _duration: 2.5
+  - _particleSystem: {fileID: 56725640039929618, guid: 08715f6f66f80a044adb31210f873c94, type: 3}
+    _duration: 9
+  - _particleSystem: {fileID: 2723388569908146664, guid: 54b34e1aab47fa845a7bd94bcd8b4044, type: 3}
+    _duration: 2.5
+  - _particleSystem: {fileID: 669981877028652135, guid: c157ed805dcb8cb409112bff8669d817, type: 3}
+    _duration: 2.5
+  _ruParticleSystem:
+    _particleSystem: {fileID: 1287255019741165986, guid: d265fb85f096810439f412dd3ecc9d14, type: 3}
+    _duration: 3.5
 --- !u!1 &3625064642981945768
 GameObject:
   m_ObjectHideFlags: 0

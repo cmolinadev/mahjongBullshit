@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BrisaManager : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class BrisaManager : MonoBehaviour
     [SerializeField] private float _winDelay = 1f;
     [SerializeField] private Chi _chi;
     private bool _initialized = false;
+    
+    [SerializeField] private List<ParticleCinematic> _particleCinematics;
+    [SerializeField] private ParticleCinematic _ruParticleSystem;
 
     private List<GameRi> _gameRiList = new List<GameRi>();
     private List<GameRi> _risInSeds = new List<GameRi>();
@@ -92,7 +98,6 @@ public class BrisaManager : MonoBehaviour
     
     private void FinishBrisa(bool finishVientoEarly = false)
     {
-        //puntos caballos y cosas
         var newList = new List<GameRi>(_gameRiList);
 
         foreach (var sed in _seds)
@@ -117,10 +122,18 @@ public class BrisaManager : MonoBehaviour
 
     public void AddRuScore(RuSet set)
     {
+        StartCoroutine(AddRuScoreRoutine(set));
+    }
+
+    private IEnumerator AddRuScoreRoutine(RuSet set)
+    {
         _chi.AddRuScore(set);
         _brisaStateMachine.CurrentState = BrisaState.showing;
         
-        //showAnimation!
+        var system = Instantiate(_ruParticleSystem.ParticleSystem, transform.position, Quaternion.identity);
+        system.GetComponentInChildren<TextMeshProUGUI>().text = set.Name;
+        yield return new WaitForSeconds(_ruParticleSystem.Duration);
+
         FinishBrisa(true);
     }
 
@@ -151,6 +164,20 @@ public class BrisaManager : MonoBehaviour
             sed.RemoveListeners(OnSedEnterRi, OnSedExitRi);
         }
         _onbrisaFinished -= _onbrisaFinished;
+    }
+
+    public void PlayRandomScoreCinematic()
+    {
+        StartCoroutine(PlayRandomScoreCinematicRoutine());
+    }
+    private IEnumerator PlayRandomScoreCinematicRoutine()
+    {
+        var data = _particleCinematics[Random.Range(0, _particleCinematics.Count)];
+        _brisaStateMachine.CurrentState = BrisaState.showing;
+        Instantiate(data.ParticleSystem.gameObject, transform.position, quaternion.identity);
+        yield return new WaitForSeconds(data.Duration);
+        _brisaStateMachine.CurrentState = BrisaState.holding;
+
     }
 
     private bool AllRisInSeds => _risInSeds.Count >= _gameRiList.Count;
