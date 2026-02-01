@@ -41,6 +41,7 @@ public class GOLPEENLAMESA : MonoBehaviour
          GotNothing();
       else
       {
+         Debug.Log("effect: "+effect);
          AddPoints(effect); //bullshit comparison but here we are
       }
    }
