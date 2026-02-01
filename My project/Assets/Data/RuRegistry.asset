@@ -136,11 +136,11 @@ MonoBehaviour:
     _scoreBonus: 8888
     _name: MURALLA
   - _riData:
-    - _yu: 3
+    - _yu: 7
       _semilla: 0
     - _yu: 6
       _semilla: 0
-    - _yu: 1
+    - _yu: 8
       _semilla: 1
     _ruEffect: 12
     _scoreBonus: 1000

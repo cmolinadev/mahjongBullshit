@@ -60,17 +60,20 @@ public class RuSet
         GrullaCharlatana
     }
 
-    public RuEffect CheckIfMatches(List<RiData> externalRiData)
+    public RuEffect CheckIfMatches(List<RiData> handRiData)
     {
+        var handDataCache = new List<RiData>(handRiData);
         List<RiData> ownDataThatMatch = new List<RiData>();
+        Debug.Log("testing: "+_name);
+
         foreach (var data in _riData) //revisar
         {
-            foreach (var incomingData in externalRiData.Where(incomingData => incomingData.Yu == data.Yu && 
-                                                                              incomingData.Semilla == data.Semilla))
+            foreach (var incomingData in handDataCache.Where(incomingData => incomingData.Yu == data.Yu && 
+                                                                             incomingData.Semilla == data.Semilla))
             {
                 ownDataThatMatch.Add(incomingData);
                 Debug.Log("matches!!"+ownDataThatMatch.Count + data.Semilla+" - "+data.Yu);
-                externalRiData.Remove(incomingData);
+                handDataCache.Remove(incomingData);
                 break;
             }
         }
