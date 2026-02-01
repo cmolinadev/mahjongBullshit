@@ -97,7 +97,7 @@ public class Chi : MonoBehaviour
 
     private int GetTotalMaxChi()
     {
-        return _chiGoals.Sum(goal => goal.Goal);
+        return _chiGoals.Last().Goal;
     }
 
     public void AddRuScore(RuSet set)
