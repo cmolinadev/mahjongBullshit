@@ -9,6 +9,7 @@ public class Chi : MonoBehaviour
 {
     [SerializeField] private List<ChiGoal> _chiGoals = new List<ChiGoal>();
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private UdaetaView _udaetaView;
     private int _currentChi;
     
     [BoxGroup("Score")][SerializeField] private AnimationCurve _expoScoreCurve;
@@ -49,10 +50,34 @@ public class Chi : MonoBehaviour
     public void CalculateScore()
     {
        _currentChi += _accountingScore;
-       _accountingScore = 0;
        
        UpdateChiBar();
-       Debug.Log("score: "+_currentChi);
+       SetUdaetaView(_accountingScore);
+       _accountingScore = 0;
+    }
+
+    private void SetUdaetaView(int accountingScore)
+    {
+        var state = UdaetaView.UdaetaState.Idle;
+
+        if (accountingScore <= 0)
+        {
+            state = UdaetaView.UdaetaState.No;
+            if (accountingScore <= -400)
+                state = UdaetaView.UdaetaState.Wow;
+        }
+        
+        if (accountingScore >= 0)
+        {
+            state = _accountingScore < 50 ? 
+                UdaetaView.UdaetaState.Smoke : 
+                UdaetaView.UdaetaState.Clap;
+            
+            if (accountingScore >= 400)
+                state = UdaetaView.UdaetaState.Wow;
+        }
+       
+        _udaetaView.PlayEmote(state);
     }
 
     public void UpdateChiBar()

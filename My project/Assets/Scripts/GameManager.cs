@@ -82,4 +82,9 @@ public class GameManager : MonoBehaviour
         gameOver = true;
     }
 
+    public void PlayUdaetaVisuals(UdaetaView.UdaetaState state)
+    {
+        
+    }
+
 }
