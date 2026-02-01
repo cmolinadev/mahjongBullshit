@@ -181,7 +181,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d0adee24345a5964c9ebba99db85c073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3031,6 +3031,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6452630891620513133}
     m_Modifications:
+    - target: {fileID: 3463551863613722223, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f61c11361f4c8f44b8daf2b542cb59d1, type: 2}
     - target: {fileID: 3858709211550394870, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
       propertyPath: m_Name
       value: Barra de Chi
@@ -3107,6 +3111,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.396
       objectReference: {fileID: 0}
+    - target: {fileID: 5733379804573935830, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0adee24345a5964c9ebba99db85c073, type: 2}
     - target: {fileID: 8631748582662383153, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3134,6 +3142,10 @@ PrefabInstance:
     - target: {fileID: 8631748582662383153, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
       propertyPath: m_SizeDelta.x
       value: 108.130005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631748582662383153, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6163
       objectReference: {fileID: 0}
     - target: {fileID: 8631748582662383153, guid: dc20366db5deeb84595ba5a8b42e1577, type: 3}
       propertyPath: m_LocalRotation.w
