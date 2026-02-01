@@ -133,3 +133,11 @@ MonoBehaviour:
     startVolume: 0
     randomPitch: 0
     source: {fileID: 0}
+  - name: Aplauso
+    clip: {fileID: 8300000, guid: 8537e3ec9a4296b48a20b348be2f6a47, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 1
+    source: {fileID: 0}

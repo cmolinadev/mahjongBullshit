@@ -31,6 +31,8 @@ public class GOLPEENLAMESA : MonoBehaviour
       var riDatas = _mano.HandRis
          .Select(handRi => handRi.RiData).ToList();
       
+      FindFirstObjectByType<sfxManager>().Play("GolpearMesa");
+
       CheckForRus(riDatas);
    }
 

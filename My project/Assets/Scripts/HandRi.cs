@@ -59,6 +59,8 @@ public class HandRi : MonoBehaviour
 
     private void MiradaDeFortuna()
     {
+        FindFirstObjectByType<sfxManager>().Play("BuscarFortuna");
+
         var data = _viento.Mano.Udaeta.GetRisData(1);
         SetRiData(data.First());
     }
