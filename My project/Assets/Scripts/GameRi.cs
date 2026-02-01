@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
@@ -19,5 +20,11 @@ public class GameRi : MonoBehaviour
     private void SetVisuals(RiData riData)
     {
         _SpriteRenderer.sprite = _riVisualConfig.GetRiSprite(riData.Semilla, riData.Yu);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        FindFirstObjectByType<sfxManager>().Play("RiChoca");
+
     }
 }

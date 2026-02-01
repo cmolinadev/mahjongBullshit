@@ -133,6 +133,7 @@ public class BrisaManager : MonoBehaviour
 
         var system = Instantiate(_ruParticleSystem.ParticleSystem, transform.position, Quaternion.identity);
         system.GetComponentInChildren<TextMeshProUGUI>().text = set.Name;
+        FindFirstObjectByType<sfxManager>().Play("JackpotRu");
         yield return new WaitForSeconds(_ruParticleSystem.Duration);
 
         FinishBrisa(true);
@@ -144,6 +145,8 @@ public class BrisaManager : MonoBehaviour
         var ri = Instantiate(_riPrefab, _faguan.GetPointerPosition(),  _faguan.GetPointerRotation());
         ri.SetRiData(data);
         _gameRiList.Add(ri);
+        FindFirstObjectByType<sfxManager>().Play("SeleccionarRi");
+
     }
 
 
@@ -176,6 +179,7 @@ public class BrisaManager : MonoBehaviour
     private IEnumerator PlayRandomScoreCinematicRoutine()
     {
         Debug.Log("a");
+        FindFirstObjectByType<sfxManager>().Play("Jackpot");
         var data = _particleCinematics[Random.Range(0, _particleCinematics.Count)];
         _brisaStateMachine.CurrentState = BrisaState.showing;
         Instantiate(data.ParticleSystem.gameObject, transform.position, quaternion.identity);

@@ -43,12 +43,20 @@ public class Sed : MonoBehaviour
         
         _riDataIn.Add(other.gameObject.GetComponent<GameRi>().RiData);
         _onEnter?.Invoke(other.gameObject.GetComponent<GameRi>());
+        if (_semilla == Semilla.Oni)
+            FindFirstObjectByType<sfxManager>().Play("SedOni");
+        else if (_semilla != other.gameObject.GetComponent<GameRi>().RiData.Semilla)
+            FindFirstObjectByType<sfxManager>().Play("SedErroneo");
+        else
+            FindFirstObjectByType<sfxManager>().Play("SedCorrecto");
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.GetComponent<GameRi>())
             return;
+        
         
         _riDataIn.Remove(other.gameObject.GetComponent<GameRi>().RiData);
         _onExit?.Invoke(other.gameObject.GetComponent<GameRi>());

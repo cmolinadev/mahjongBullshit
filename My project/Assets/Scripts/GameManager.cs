@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+            FindFirstObjectByType<sfxManager>().Play("Click");
+
+        
         if (inMenu)
         {
             if (Input.GetMouseButtonDown(0))
@@ -76,6 +80,7 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        FindFirstObjectByType<sfxManager>().Play("GongStart");
         ServeNextViento();
         gameStarted = true;
     }
