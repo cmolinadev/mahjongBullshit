@@ -129,7 +129,8 @@ public class BrisaManager : MonoBehaviour
     {
         _chi.AddRuScore(set);
         _brisaStateMachine.CurrentState = BrisaState.showing;
-        
+        Debug.Log("b");
+
         var system = Instantiate(_ruParticleSystem.ParticleSystem, transform.position, Quaternion.identity);
         system.GetComponentInChildren<TextMeshProUGUI>().text = set.Name;
         yield return new WaitForSeconds(_ruParticleSystem.Duration);
@@ -168,10 +169,13 @@ public class BrisaManager : MonoBehaviour
 
     public void PlayRandomScoreCinematic()
     {
+        if (isShowing)
+            return;
         StartCoroutine(PlayRandomScoreCinematicRoutine());
     }
     private IEnumerator PlayRandomScoreCinematicRoutine()
     {
+        Debug.Log("a");
         var data = _particleCinematics[Random.Range(0, _particleCinematics.Count)];
         _brisaStateMachine.CurrentState = BrisaState.showing;
         Instantiate(data.ParticleSystem.gameObject, transform.position, quaternion.identity);

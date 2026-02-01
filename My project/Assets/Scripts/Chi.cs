@@ -63,6 +63,7 @@ public class Chi : MonoBehaviour
 
         if (accountingScore <= 0)
         {
+            _gameManager.CurrentViento.Dialogo.ShowRandomFailureText();
             state = UdaetaView.UdaetaState.No;
             if (accountingScore <= -400)
                 state = UdaetaView.UdaetaState.Wow;
