@@ -528,6 +528,7 @@ MonoBehaviour:
   - {fileID: 3943827803220750380}
   - {fileID: 3625064642981945768}
   - {fileID: 704312358495108876}
+  _particles: {fileID: 8927989314184373799, guid: 71e3a0f1ab7d4264599c019d769f4083, type: 3}
 --- !u!1 &1653970699802955211
 GameObject:
   m_ObjectHideFlags: 0

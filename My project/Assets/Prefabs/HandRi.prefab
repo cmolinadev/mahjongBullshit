@@ -135,6 +135,7 @@ MonoBehaviour:
     _semilla: 0
   _visuals: {fileID: 41982552316994647}
   _riVisuals: {fileID: 11400000, guid: 3b1ebcec25cc3dc4680dce8d273dcb40, type: 2}
+  _miradaDeFortunaParticulas: {fileID: 4300534548744701710, guid: b9ffafb643109514ba880cc227b9ad4e, type: 3}
 --- !u!58 &452402432221399992
 CircleCollider2D:
   m_ObjectHideFlags: 0

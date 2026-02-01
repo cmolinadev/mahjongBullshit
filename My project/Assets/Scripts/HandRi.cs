@@ -11,7 +11,7 @@ public class HandRi : MonoBehaviour
     [SerializeField][ReadOnly] private RiData _riData;
     [SerializeField] private SpriteRenderer _visuals;
     [SerializeField] private RiVisualConfig _riVisuals;
-
+    [SerializeField] private ParticleSystem _miradaDeFortunaParticulas;
     private Sequence _showSequence;
     Viento _viento;
     
@@ -60,7 +60,7 @@ public class HandRi : MonoBehaviour
     private void MiradaDeFortuna()
     {
         FindFirstObjectByType<sfxManager>().Play("BuscarFortuna");
-
+        Instantiate(_miradaDeFortunaParticulas, transform.position, Quaternion.identity);
         var data = _viento.Mano.Udaeta.GetRisData(1);
         SetRiData(data.First());
     }
