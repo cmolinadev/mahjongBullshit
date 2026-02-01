@@ -15,6 +15,8 @@ public class HandRi : MonoBehaviour
     private Sequence _showSequence;
     Viento _viento;
     
+    float originalVisualsScale ;
+    
     public RiData RiData => _riData;
 
 
