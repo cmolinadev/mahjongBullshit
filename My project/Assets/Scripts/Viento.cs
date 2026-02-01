@@ -10,8 +10,10 @@ public class Viento : MonoBehaviour
     [SerializeField] BrisaManager _brisaManager;
     [SerializeField] private Mano _mano;
     [SerializeField] private ChiBar _chiBar;
+    [SerializeField] private Dialogo _dialogo;
     private bool _inProgress = false;
     
+    public Dialogo Dialogo => _dialogo;
     public bool Finished =>  !_inProgress;
     public Mano Mano => _mano;
     public BrisaManager BrisaManager => _brisaManager;
@@ -65,6 +67,7 @@ public class Viento : MonoBehaviour
         _mano.Initialize(this);
         _mano.PedirRis();
         _inProgress = true;
+        _dialogo.ShowRandomVientoText();
     }
 
     public void FinishViento()

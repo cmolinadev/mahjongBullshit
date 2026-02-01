@@ -42,9 +42,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 46aaf49a1c221d04abf516de9f6f0a07, type: 3}
   - {fileID: 21300000, guid: 656dbffb444736649bb04ab65825103b, type: 3}
   - {fileID: 21300000, guid: 077fc8f8407b5f74fb5b535714f7321e, type: 3}
-  _sedTri: {fileID: -600928670, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
-  _sedChi: {fileID: 1532399144, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
-  _sedMo: {fileID: -1647601888, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
+  _sedTri: {fileID: 499070779, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
+  _sedChi: {fileID: -1097672415, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
+  _sedMo: {fileID: 168832224, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
   _dragonSed: {fileID: -1788495269, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
-  _oniSed: {fileID: 243108387, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
+  _oniSed: {fileID: 1297855845, guid: 52baca691330f7344b46e3f7ea54df4f, type: 3}
   _vacioSed: {fileID: -872822111, guid: fbf27d8d3cdd4904186d648d91b25857, type: 3}
