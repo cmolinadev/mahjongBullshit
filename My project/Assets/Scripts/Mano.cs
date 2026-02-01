@@ -9,8 +9,9 @@ public class Mano : MonoBehaviour
     [FormerlySerializedAs("_holdingPoints")] 
     [SerializeField] private List<HandRi> _handRis = new List<HandRi>();
     [SerializeField] private Udaeta _udaeta;
-    [SerializeField] private float _miradasDeFortuna = 3;
-    private float _miradasDeFortunaRestantes = 0;
+    [SerializeField] private int _miradasDeFortuna = 3;
+    [SerializeField] private TalismanesView _talismanesView;
+    private int _miradasDeFortunaRestantes = 0;
     
     public List<HandRi> HandRis => _handRis;
     public Udaeta Udaeta => _udaeta;
@@ -34,13 +35,17 @@ public class Mano : MonoBehaviour
     private void RecargarMirada()
     {
         _miradasDeFortunaRestantes = _miradasDeFortuna;
+        _talismanesView.SetCount(_miradasDeFortunaRestantes);
     }
 
     public bool IntentarMirada()
     {
+        _talismanesView.SetCount(_miradasDeFortunaRestantes);
         if (!(_miradasDeFortunaRestantes > 0)) return false;
         
         _miradasDeFortunaRestantes --;
+        
+        _talismanesView.SetCount(_miradasDeFortunaRestantes);
         return true;
     }
 
