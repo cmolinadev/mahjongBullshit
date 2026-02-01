@@ -463,7 +463,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.4697647, y: -2.8516176}
+  m_Offset: {x: 2.986742, y: -2.8516176}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -474,7 +474,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5027571, y: 4.0091844}
+  m_Size: {x: 0.46880245, y: 4.0091844}
   m_EdgeRadius: 0
 --- !u!1 &1531902120501546054
 GameObject:
@@ -628,20 +628,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _writeText: {fileID: 7142220532827342835}
   _vientoDialogues:
-  - Cada viento trae una nueva vida. Solo con suficiente Chi se pueden abrir las
-    puertas.
-  - Consumir una dieta variada y equilibrada.
+  - Cada viento trae una nueva vida. Necesitas Chi para abrir las puertas.
+  - Si te caes, debes levantarte.
   - Un Yu alto puede ser perjudicial si la Semilla no corresponde. Medita sabiamente.
   - Puedes utilizar la Mirada de Fortuna para alterar el Yu y la Semilla de un Ri.
   - "Incre\xEDbles fortunas te aguardan. Deliciosa diversi\xF3n sin par."
   - "Ri Chi, Ri Tri, Ri M\xF5."
   - Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.
+  - El dinero no lo es todo, pero sin dinero no haces nada.
   _onFailureDialogues:
   - "Semillas incompatibles engendran un Oni. Vigila tu tierra y cultiva con sabidur\xEDa."
   - Nuevos vientos arrastran a los Oni y purifican el tablero. Utiliza las brisas
     a tu favor.
   - La soberbia es el peor enemigo. Estudia el entorno y haz florecer nuevas oportunidades.
   - "No, no, no. As\xED no se juega."
+  _refranesString:
+  - Fran1
+  - Fran2
+  - Fran3
+  - Fran4
+  - Fran5
+  - Fran6
+  - Fran7
+  - Fran8
+  - Fran9
 --- !u!1 &1701861464082159934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hola soy cartman chino soy como cartman pero chino
+  m_text: El dinero no lo es todo, pero sin dinero no haces nada
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1333d00be4e2ed428f914b72da9fe1d, type: 2}
   m_sharedMaterial: {fileID: -8218894744407052274, guid: b1333d00be4e2ed428f914b72da9fe1d, type: 2}
@@ -1498,7 +1508,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.85
+  m_fontSize: 24.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
