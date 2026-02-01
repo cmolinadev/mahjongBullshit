@@ -67,7 +67,9 @@ public class RuSet
                                                                               incomingData.Semilla == data.Semilla))
             {
                 ownDataThatMatch.Add(incomingData);
-                Debug.Log("matches!!"+ownDataThatMatch.Count + data.Semilla);
+                Debug.Log("matches!!"+ownDataThatMatch.Count + data.Semilla+" - "+data.Yu);
+                externalRiData.Remove(incomingData);
+                break;
             }
         }
         
