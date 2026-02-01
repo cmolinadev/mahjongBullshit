@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8696453676010852675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196201172552629897}
+  - component: {fileID: 3665720096213946448}
+  m_Layer: 0
+  m_Name: Sfx Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196201172552629897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696453676010852675}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3665720096213946448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696453676010852675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138cf61b5dd7ca44e8679a23b9e4cd5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Click
+    clip: {fileID: 8300000, guid: 512d92b7b9ab5e742b33e5d4ddd3e2aa, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: BuscarFortuna
+    clip: {fileID: 8300000, guid: f8d812817069c1f488f92fdc4cb6135b, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: GolpearMesa
+    clip: {fileID: 8300000, guid: 427358706f9cdd849bfd14ae237a2534, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: GongStart
+    clip: {fileID: 8300000, guid: b5b8ffaca3abcec418c21b6beb7028b7, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Jackpot
+    clip: {fileID: 8300000, guid: 5ef15fabb39eb1b49a597283af1f2176, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: JackpotRu
+    clip: {fileID: 8300000, guid: 25f600cc58e799b499af920020ded295, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: RiChoca
+    clip: {fileID: 8300000, guid: b7f96e5e4b632ac449e5ce77b7041586, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: SedCorrecto
+    clip: {fileID: 8300000, guid: c886198dca8346b4098743d7deec0afa, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: SedErroneo
+    clip: {fileID: 8300000, guid: 098c836b16c51d848a5b4405a4271e65, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: SedOni
+    clip: {fileID: 8300000, guid: 6160dccf58a2048409924558c554b869, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: SeleccionarRi
+    clip: {fileID: 8300000, guid: 1155fb017478f5b4cacdfd96791e0b0c, type: 3}
+    volume: 1
+    pitch: 1
+    startPitch: 0
+    startVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
