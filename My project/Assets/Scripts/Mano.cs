@@ -6,11 +6,13 @@ using UnityEngine.Serialization;
 
 public class Mano : MonoBehaviour
 {
-    [FormerlySerializedAs("_holdingPoints")] [SerializeField] private List<HandRi> _handRis = new List<HandRi>();
+    [FormerlySerializedAs("_holdingPoints")] 
+    [SerializeField] private List<HandRi> _handRis = new List<HandRi>();
     [SerializeField] private Udaeta _udaeta;
     [SerializeField] private float _miradasDeFortuna = 3;
     private float _miradasDeFortunaRestantes = 0;
     
+    public List<HandRi> HandRis => _handRis;
     public Udaeta Udaeta => _udaeta;
     
     public void Initialize(Viento viento)

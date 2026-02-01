@@ -116,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2722069894557205350}
   - component: {fileID: 8562259329864912911}
+  - component: {fileID: 2508633696367981336}
   m_Layer: 0
   m_Name: Boton Golpe
   m_TagString: Untagged
@@ -174,3 +175,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.14654735}
   serializedVersion: 2
   m_Radius: 1.345765
+--- !u!114 &2508633696367981336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935859605075679801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149981b64ee966f4cbca2537b1b4326f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ruLibrary: {fileID: 11400000, guid: 9f9938067e71f89419e0a1af25d5340e, type: 2}
+  _mano: {fileID: 0}
+  _viento: {fileID: 0}
+  _animator: {fileID: 1674051659219493621}
