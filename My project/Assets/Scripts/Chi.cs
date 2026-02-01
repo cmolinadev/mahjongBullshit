@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Chi : MonoBehaviour
 {
     [SerializeField] private List<ChiGoal> _chiGoals = new List<ChiGoal>();
+    [SerializeField] private GameManager _gameManager;
     private int _currentChi;
     
     [BoxGroup("Score")][SerializeField] private AnimationCurve _expoScoreCurve;
@@ -48,7 +50,24 @@ public class Chi : MonoBehaviour
     {
        _currentChi += _accountingScore;
        _accountingScore = 0;
+       
+       UpdateChiBar();
        Debug.Log("score: "+_currentChi);
+    }
+
+    public void UpdateChiBar()
+    {
+        _gameManager.CurrentViento.SetChiBar(_currentChi);
+    }
+
+    public void InitializeChiBar()
+    {
+        _gameManager.CurrentViento.InitializeChiBar(GetTotalMaxChi());
+    }
+
+    private int GetTotalMaxChi()
+    {
+        return _chiGoals.Sum(goal => goal.Goal);
     }
 }
 
@@ -56,8 +75,8 @@ public class Chi : MonoBehaviour
 public class ChiGoal
 {
     [SerializeField] Viento _viento;
-    [SerializeField] float _chiGoal;
+    [SerializeField] int _chiGoal;
     
     public Viento Viento => _viento;
-    public float Goal => _chiGoal;
+    public int Goal => _chiGoal;
 }

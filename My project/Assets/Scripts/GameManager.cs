@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     Viento _currentViento;
     private bool gameStarted = false;
     bool gameOver = false;
+    public Viento CurrentViento => _currentViento;
     
     void Update()
     {
@@ -65,6 +66,8 @@ public class GameManager : MonoBehaviour
         _currentViento = _vientos[0];
         _currentViento.gameObject.SetActive(true);
         _currentViento.StartViento();
+        _chi.InitializeChiBar();
+        _chi.UpdateChiBar();
     }
 
     private void Win()

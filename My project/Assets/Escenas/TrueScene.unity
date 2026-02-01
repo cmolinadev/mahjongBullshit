@@ -512,13 +512,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chiGoals:
   - _viento: {fileID: 73295820}
-    _chiGoal: 400
+    _chiGoal: 300
   - _viento: {fileID: 477962506}
-    _chiGoal: 1300
+    _chiGoal: 600
   - _viento: {fileID: 1661728980}
-    _chiGoal: 2400
+    _chiGoal: 1000
   - _viento: {fileID: 324518869}
-    _chiGoal: 4000
+    _chiGoal: 1500
+  _gameManager: {fileID: 1314216681}
   _expoScoreCurve:
     serializedVersion: 2
     m_Curve:
@@ -672,6 +673,14 @@ PrefabInstance:
       propertyPath: _chi
       value: 
       objectReference: {fileID: 1314216683}
+    - target: {fileID: 802114885148557831, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802114885148557831, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2037349233638628430, guid: 9b1da4e2104883848bf4928fa2501a52, type: 3}
       propertyPath: m_Color.b
       value: 0.9684842

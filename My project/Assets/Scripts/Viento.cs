@@ -9,11 +9,21 @@ public class Viento : MonoBehaviour
     private int _remainigBrisas;
     [SerializeField] BrisaManager _brisaManager;
     [SerializeField] private Mano _mano;
+    [SerializeField] private ChiBar _chiBar;
     private bool _inProgress = false;
     
     public bool Finished =>  !_inProgress;
     public Mano Mano => _mano;
-    
+
+    public void SetChiBar(int chi)
+    {
+        _chiBar.SetChi(chi);
+    }
+
+    public void InitializeChiBar(int maxChi)
+    {
+        _chiBar.Initialize(maxChi);
+    }
     
     public bool SpawnRi(RiData data)
     {
