@@ -21,16 +21,19 @@ public class BrisaManager : MonoBehaviour
     public bool IsDropping => _brisaStateMachine.CurrentState == BrisaState.dropping;
     public bool isHolding => _brisaStateMachine.CurrentState == BrisaState.holding;
     public bool isLanded => _brisaStateMachine.CurrentState == BrisaState.landed;
+    public bool isShowing => _brisaStateMachine.CurrentState == BrisaState.showing;
 
+   
     private float _elapsedAllRisTime = 0;
     
-    private Action _onbrisaFinished;
+    private Action<bool> _onbrisaFinished;
     
     public enum BrisaState
     {
         holding,
         dropping,
         landed,
+        showing,
         
     }
 
@@ -55,7 +58,7 @@ public class BrisaManager : MonoBehaviour
             _brisaStateMachine.CurrentState = BrisaState.landed;
     }
 
-    public void Initialize(Action onBrisaFinished)
+    public void Initialize(Action<bool> onBrisaFinished)
     {
         _onbrisaFinished += onBrisaFinished;
         
@@ -63,7 +66,8 @@ public class BrisaManager : MonoBehaviour
         
         _brisaStateMachine.AddState(BrisaState.holding);
         _brisaStateMachine.AddState(BrisaState.dropping);
-        _brisaStateMachine.AddState(BrisaState.landed, FinishBrisa);
+        _brisaStateMachine.AddState(BrisaState.showing);
+        _brisaStateMachine.AddState(BrisaState.landed, FinishBrisaMachine);
         
         _brisaStateMachine.CurrentState = BrisaState.holding;
 
@@ -74,6 +78,11 @@ public class BrisaManager : MonoBehaviour
         }
     }
 
+    private void FinishBrisaMachine()
+    {
+        FinishBrisa(false);
+    }
+
     public void StartHolding()
     {
         _elapsedAllRisTime = 0;
@@ -81,7 +90,7 @@ public class BrisaManager : MonoBehaviour
         _brisaStateMachine.CurrentState = BrisaState.holding;
     }
     
-    private void FinishBrisa()
+    private void FinishBrisa(bool finishVientoEarly = false)
     {
         //puntos caballos y cosas
         var newList = new List<GameRi>(_gameRiList);
@@ -100,10 +109,19 @@ public class BrisaManager : MonoBehaviour
         }
         
         newList.Clear();
-        _onbrisaFinished?.Invoke();
+        _onbrisaFinished?.Invoke(finishVientoEarly);
 
         foreach (var sed in _seds) 
             sed.ClearBrisa();
+    }
+
+    public void AddRuScore(RuSet set)
+    {
+        _chi.AddRuScore(set);
+        _brisaStateMachine.CurrentState = BrisaState.showing;
+        
+        //showAnimation!
+        FinishBrisa(true);
     }
 
     public void SpawnRi(RiData data)

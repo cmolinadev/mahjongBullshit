@@ -14,6 +14,7 @@ public class Viento : MonoBehaviour
     
     public bool Finished =>  !_inProgress;
     public Mano Mano => _mano;
+    public BrisaManager BrisaManager => _brisaManager;
 
     public void SetChiBar(int chi)
     {
@@ -40,8 +41,13 @@ public class Viento : MonoBehaviour
 
     }
 
-    public void OnBrisaFinished()
+    public void OnBrisaFinished(bool finishViento)
     {
+        if (finishViento)
+        {
+            FinishViento();
+            return;
+        }
         _remainigBrisas--;
         if (_remainigBrisas > 0)
             _brisaManager.StartHolding();

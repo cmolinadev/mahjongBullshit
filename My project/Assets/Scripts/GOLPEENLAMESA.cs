@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GOLPEENLAMESA : MonoBehaviour
 {
-   [SerializeField] private RuLibrary _ruLibrary;
+   [FormerlySerializedAs("_ruLibrary")] [SerializeField] private RuRegistry ruRegistry;
    [SerializeField] private Mano _mano;
    [SerializeField] private Viento _viento;
 
@@ -23,7 +24,7 @@ public class GOLPEENLAMESA : MonoBehaviour
    }
    
 
-   public bool CanHit => !_viento.Finished;
+   public bool CanHit => !_viento.Finished && !_viento.BrisaManager.isShowing;
 
    private void GOLPEAR()
    {
@@ -35,12 +36,21 @@ public class GOLPEENLAMESA : MonoBehaviour
 
    private void CheckForRus(List<RiData> risInHand)
    {
-      var effect = _ruLibrary.TryGetRu(risInHand);
+      var effect = ruRegistry.TryGetRu(risInHand);
       if (effect == RuSet.RuEffect.None)
          GotNothing();
       else
       {
-         Debug.Log("VICTORIA SUPREMA: "+effect);
+         AddPoints(effect); //bullshit comparison but here we are
+      }
+   }
+
+   private void AddPoints(RuSet.RuEffect effect)
+   {
+      RuSet set = ruRegistry.GetRuByType(effect);
+      if (set != null)
+      {
+         _viento.BrisaManager.AddRuScore(set);
       }
    }
 

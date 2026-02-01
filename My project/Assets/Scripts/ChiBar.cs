@@ -19,7 +19,6 @@ public class ChiBar : MonoBehaviour
 
     public void SetChi(int chi)
     {
-        Debug.Log("value = "+chi/_maxChi);
         _chiSlider.value = chi/_maxChi;
         _chiText.text = chi.ToString();
         _chiText.transform.DOPunchScale(

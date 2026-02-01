@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Chi : MonoBehaviour
@@ -93,6 +94,12 @@ public class Chi : MonoBehaviour
     private int GetTotalMaxChi()
     {
         return _chiGoals.Sum(goal => goal.Goal);
+    }
+
+    public void AddRuScore(RuSet set)
+    {
+        _accountingScore = set.ScoreBonus;
+        CalculateScore();
     }
 }
 
